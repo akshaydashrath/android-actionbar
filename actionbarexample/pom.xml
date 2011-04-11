@@ -4,9 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.markupartist.android</groupId>
-    <artifactId>actionbar</artifactId>
-    <name>Android ActionBar</name>
-    <packaging>apklib</packaging>
+    <artifactId>actionbar-example</artifactId>
+    <name>Example Project</name>
+    <packaging>apk</packaging>
 
     <parent>
         <groupId>com.markupartist.android</groupId>
@@ -30,4 +30,13 @@
             </plugin>
         </plugins>
     </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.markupartist.android</groupId>
+            <artifactId>actionbar</artifactId>
+            <version>${project.version}</version>
+            <type>apklib</type>
+        </dependency>
+    </dependencies>
 </project>
