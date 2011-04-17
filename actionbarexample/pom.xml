@@ -39,4 +39,33 @@
             <type>apklib</type>
         </dependency>
     </dependencies>
+
+    <profiles>
+        <profile>
+            <id>release-sign-artifacts</id>
+            <activation>
+                <property>
+                    <name>performRelease</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.jakewharton</groupId>
+                        <artifactId>github-deploy-maven-plugin</artifactId>
+                        <version>1.0.1</version>
+                        <configuration>
+                            <types>
+                                <type>apk</type>
+                            </types>
+                        </configuration>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                     </plugin>
+                 </plugins>
+             </build>
+         </profile>
+    </profiles>
 </project>
